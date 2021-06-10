@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="container-item">
+            <input type="text" id="inName" placeholder="Nome">
+            <input type="number" id="inPeso" placeholder="Peso(Kg)">
+            <input type="number" id="inAltura" placeholder="Altura(m) Ex: 1.70">
+            <input type="button" value="Enviar" id="btnEnviar">
+        </div>
+        <div class="container-item2 animate__animated animate__fadeInDown">
+            <div class="container-results">
+                <dl class="container-dl">
+                    <dt>
+                        Nome
+                    </dt>
+                        <dd id="outName"></dd>
+                </dl>
+                <dl class="container-dl">
+                    <dt>
+                        Peso
+                    </dt>
+                        <dd id="outPeso"></dd>
+                </dl>
+                <dl class="container-dl">
+                    <dt>
+                        Altura
+                    </dt>
+                        <dd id="outAltura"></dd>
+                </dl>
+                <dl class="container-dl">
+                    <dt>
+                        Imc
+                    </dt>
+                        <dd id="outImc"></dd>
+                </dl>
+                <dl class="container-dl">
+                    <dt>
+                        Categoria
+                    </dt>
+                        <dd id="outCategoria"></dd>
+                </dl>
+            </div>
+
+            <div class="reload-container">
+                <div id="reload">X</div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="container-modal">
+        <div class="modal">
+            <h3 class="modal_text">Por favor, preencha todos os campos!!!</h3>
+            <button id="btnModal">Voltar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
