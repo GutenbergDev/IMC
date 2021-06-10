@@ -95,8 +95,6 @@ function calculoIMC() {
     } else {
         containerItem2.style.display = 'flex';
     }
-    btnEnviar.disabled = true;
-
 }
 let btnEnviar = sMin("#btnEnviar");
 btnEnviar.addEventListener("click", calculoIMC);
