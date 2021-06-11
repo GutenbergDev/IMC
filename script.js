@@ -22,20 +22,14 @@ function calculoIMC() {
     }
 
     let imc = peso / (altura * altura).toFixed(1);
-    let desnutrido = `Desnutrido`;
-    let saudavel = `Saudável`;
-    let sobrepeso = `Sobrepeso`;
-    let obesidade1 = `Obesidade Grau I`;
-    let obesidade2 = `Obesidade Grau II`;
-    let obesidade3 = `Obesidade Grau III`;
-    let superO = `Super Obesidade`;
+    let categoria = ["Desnutrido", "Saudável", "Sobrepeso", "Obesidade Grau I", "Obesidade Grau II", "Obesidade Grau III", "Super Obesidade"];
 
     if(imc <= 14) {
         out[0].textContent = `${name}`;
         out[1].textContent = `${peso}`;
         out[2].textContent = `${altura.toFixed(2)}`;
         out[3].textContent = `${imc.toFixed(1)}`;
-        out[4].textContent = `${desnutrido}`;
+        out[4].textContent = `${categoria[0]}`;
         out[4].style.color = '#e95353';
         out[4].style.background = '#ffc8c8';
     }else if(imc == 18.5 || imc < 25) {
@@ -43,7 +37,7 @@ function calculoIMC() {
         out[1].textContent = `${peso}`;
         out[2].textContent = `${altura.toFixed(2)}`;
         out[3].textContent = `${imc.toFixed(1)}`;
-        out[4].textContent = `${saudavel}`;
+        out[4].textContent = `${categoria[1]}`;
         out[4].style.color = '#356937';
         out[4].style.background = '#7FC682';
     } else if(imc == 25 || imc < 30) {
@@ -51,7 +45,7 @@ function calculoIMC() {
         out[1].textContent = `${peso}`;
         out[2].textContent = `${altura.toFixed(2)}`;
         out[3].textContent = `${imc.toFixed(1)}`;
-        out[4].textContent = `${sobrepeso}`;
+        out[4].textContent = `${categoria[2]}`;
         out[4].style.color = '#e95353';
         out[4].style.background = '#ffc8c8';
     } else if(imc == 30 || imc < 35) {
@@ -59,7 +53,7 @@ function calculoIMC() {
         out[1].textContent = `${peso}`;
         out[2].textContent = `${altura}`;
         out[3].textContent = `${imc.toFixed(1)}`;
-        out[4].textContent = `${obesidade1}`;
+        out[4].textContent = `${categoria[3]}`;
         out[4].style.color = '#e95353';
         out[4].style.background = '#ffc8c8';
     } else if(imc == 35 || imc < 40) {
@@ -67,7 +61,7 @@ function calculoIMC() {
         out[1].textContent = `${peso}`;
         out[2].textContent = `${altura.toFixed(2)}`;
         out[3].textContent = `${imc.toFixed(1)}`;
-        out[4].textContent = `${obesidade2}`;
+        out[4].textContent = `${categoria[4]}`;
         out[4].style.color = '#e95353';
         out[4].style.background = '#ffc8c8';
     } else if(imc == 40 || imc < 50) {
@@ -75,7 +69,7 @@ function calculoIMC() {
         out[1].textContent = `${peso}`;
         out[2].textContent = `${altura.toFixed(2)}`;
         out[3].textContent = `${imc.toFixed(1)}`;
-        out[4].textContent = `${obesidade3}`;
+        out[4].textContent = `${categoria[5]}`;
         out[4].style.color = '#e95353';
         out[4].style.background = '#ffc8c8';
     } else if(imc > 50) {
@@ -83,7 +77,7 @@ function calculoIMC() {
         out[1].textContent = `${peso}`;
         out[2].textContent = `${altura.toFixed(2)}`;
         out[3].textContent = `${imc.toFixed(1)}`;
-        out[4].textContent = `${superO}`;
+        out[4].textContent = `${categoria[6]}`;
         out[4].style.color = '#e95353';
         out[4].style.background = '#ffc8c8';
     }
